@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     clickValueLabel.textContent = `Click Value: ${clickValue}`;
 
     clickButton.addEventListener("click", function () {
-        counter = counter + clickValue;
+        counter += clickValue;
         counterLabel.textContent = `Counter: ${counter}`;
     });
 
@@ -23,10 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
         clickValueLabel.textContent = `Click Value: ${clickValue}`;
     });
 
-    document.body.appendChild(counterLabel);
-    document.body.appendChild(clickButton);
-    document.body.appendChild(upgradePlusOne);
-    document.body.appendChild(clickValueLabel);
+
 });
 
 function test(){
