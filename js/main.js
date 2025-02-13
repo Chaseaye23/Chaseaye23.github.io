@@ -1,18 +1,32 @@
+let counter = 0;
+let clickValue = 1;
+
 document.addEventListener("DOMContentLoaded", function () {
-    let counter = 0;
-    const button = document.getElementById("button");
-    const display = document.getElementById("counter");
+    
+    const clickButton = document.getElementById("clickButton");
+    const counterLabel = document.getElementById("counter");
+    const upgradePlusOne =  document.getElementById("upgradePlusOne")
+    const clickValueLabel =  document.getElementById("clickValue")
 
-    button.textContent = "Click me";
-    display.textContent = `Counter: ${counter}`;
+    clickButton.textContent = "Click me";
+    upgradePlusOne.textContent = "Increase Click Value";
+    counterLabel.textContent = `Counter: ${counter}`;
+    clickValueLabel.textContent = `Click Value: ${clickValue}`;
 
-    button.addEventListener("click", function () {
-        counter++;
-        display.textContent = `Counter: ${counter}`;
+    clickButton.addEventListener("click", function () {
+        counter = counter + clickValue;
+        counterLabel.textContent = `Counter: ${counter}`;
     });
 
-    document.body.appendChild(display);
-    document.body.appendChild(button);
+    clickValueLabel.addEventListener("click", function () {
+        clickValue++;
+        clickValueLabel.textContent = `Click Value: ${clickValue}`;
+    });
+
+    document.body.appendChild(counterLabel);
+    document.body.appendChild(clickButton);
+    document.body.appendChild(upgradePlusOne);
+    document.body.appendChild(clickValueLabel);
 });
 
 function test(){
