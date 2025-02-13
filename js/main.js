@@ -5,8 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
     
     const clickButton = document.getElementById("clickButton");
     const counterLabel = document.getElementById("counter");
-    const upgradePlusOne =  document.getElementById("upgradePlusOne")
-    const clickValueLabel =  document.getElementById("clickValue")
+    const upgradePlusOne =  document.getElementById("upgradePlusOne") //button to add 1 value per click
+    const clickValueLabel =  document.getElementById("clickValue") //displays click value
 
     clickButton.textContent = "Click me";
     upgradePlusOne.textContent = "Increase Click Value";
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
         counterLabel.textContent = `Counter: ${counter}`;
     });
 
-    clickValueLabel.addEventListener("click", function () {
+    upgradePlusOne.addEventListener("click", function () {
         clickValue++;
         clickValueLabel.textContent = `Click Value: ${clickValue}`;
     });
