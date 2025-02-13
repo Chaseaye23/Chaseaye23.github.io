@@ -14,3 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.appendChild(display);
     document.body.appendChild(button);
 });
+
+function test(){
+    console.log("success");
+}
